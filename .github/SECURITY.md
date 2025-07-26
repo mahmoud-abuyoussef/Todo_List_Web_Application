@@ -16,10 +16,10 @@ We take security seriously and appreciate your efforts to responsibly disclose a
 
 ## Supported Versions
 
-| Version | Supported          |
-|---------|--------------------|
+| Version                  | Supported              |
+| ------------------------ | ---------------------- |
 | Current (in development) | ✅ Actively maintained |
-| Past versions             | ❌ Not applicable     |
+| Past versions            | ❌ Not applicable      |
 
 ---
 

@@ -53,7 +53,6 @@ This project simulates a real-world development environment—from receiving des
   ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff)
 
 - ### Frameworks
-
   - #### CSS
 
     ![TailwindCSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white)
@@ -71,7 +70,6 @@ This project simulates a real-world development environment—from receiving des
 > Tests will ensure UI and business logic behave as expected.
 
 - ### Tools
-
   - #### 💻 IDE/Code Editors
 
     ![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)

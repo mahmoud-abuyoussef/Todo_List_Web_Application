@@ -3,12 +3,14 @@
 ## 📌 Description
 
 <!-- Clearly and concisely describe the purpose of this PR -->
+
 - What feature, fix, or update was implemented?
 - Why was it needed?
 
 ## 🧾 Related Issues
 
 <!-- Link related issues using GitHub syntax (e.g., Closes #12) -->
+
 Closes #
 
 ## 🧪 Type of Change
@@ -44,4 +46,5 @@ Please mark the relevant option:
 ## 👥 Reviewers
 
 <!-- Mention specific people for review if needed -->
+
 - @mahmoud-abuyoussef

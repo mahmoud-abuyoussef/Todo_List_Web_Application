@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-input: hsl(0, 0%, 60%);
+  --color-icon: hsl(0, 0%, 100%);
+  --color-date: hsl(0, 0%, 100%);
+  --color-text: hsl(0, 0%, 45.49%);
+  --color-background: hsl(0, 0%, 100%);
+  --color-border: hsl(228, 5.62%, 65.1%);
+  --color-main-color: hsl(0, 100%, 70.2%);
+  --color-text-muted: hsl(228, 5.62%, 65.1%);
+  --color-foreground: hsl(210, 8.33%, 14.12%);
+  --color-background-navbar: hsl(0, 0%, 97.25%);
+  --color-priority-heigh: hsl(0, 89.08%, 53.33%);
+  --color-second-color: hsl(13.58, 89.08%, 53.33%);
+  --color-status-notstarted: hsl(0, 89.08%, 53.33%);
+  --color-status-inprogress: hsl(231.7, 100%, 50.39%);
+  --color-status-completed: hsl(118.52, 98.78%, 32.16%);
+  --color-priority-moderate: hsl(199.88, 73.39%, 57.25%);
+}
