@@ -257,12 +257,22 @@ Todo List Web Applications
 ├─ public
 │  ├─ favicon.ico
 │  └─ images
+│     ├─ auth-background.webp
 │     ├─ login.webp
 │     └─ register.webp
 ├─ src
 │  ├─ app
+│  │  ├─ auth
+│  │  │  ├─ layout.tsx
+│  │  │  └─ login
+│  │  │     └─ page.tsx
 │  │  ├─ layout.tsx
 │  │  └─ page.tsx
+│  ├─ modules
+│  │  └─ auth
+│  │     └─ login
+│  │        └─ components
+│  │           └─ LoginForm.tsx
 │  └─ styles
 │     └─ globals.css
 ├─ .prettierrc
@@ -272,8 +282,8 @@ Todo List Web Applications
 ├─ package.json
 ├─ pnpm-lock.yaml
 ├─ postcss.config.mjs
-└─ tsconfig.json
 ├─ README.md
+└─ tsconfig.json
 
 ```
 
