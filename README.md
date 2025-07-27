@@ -171,9 +171,9 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 ### Milestone: `v0.1 – Setup & Authentication`
 
 - [x] Setup Project Structure.
-- [ ] Build Auth Layout (Shared Layout for Login/Register).
+- [x] Build Auth Layout (Shared Layout for Login/Register).
 - [ ] Build Register Page UI.
-- [ ] Build Login Page UI.
+- [x] Build Login Page UI.
 - [ ] Integrate Register API.
 - [ ] Integrate Login API.
 - [ ] Persist User Session.
