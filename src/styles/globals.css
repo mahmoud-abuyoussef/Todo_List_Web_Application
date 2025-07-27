@@ -18,3 +18,7 @@
   --color-status-completed: hsl(118.52, 98.78%, 32.16%);
   --color-priority-moderate: hsl(199.88, 73.39%, 57.25%);
 }
+
+.auth-layout {
+  background-image: url("/images/auth-background.webp");
+}
