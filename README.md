@@ -168,64 +168,83 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 
 > This roadmap tracks the key milestones and progress of the Todo List Web App project. Each milestone groups related features and tasks to simulate a real-world agile workflow.
 
-### Milestone: `v0.1 – Authentication & Setup`
+### Milestone: `v0.1 – Setup & Authentication`
 
-- [x] Setup project structure
-- [ ] Create folder structure
-- [ ] Design Register Page UI
-- [ ] Design Login Page UI
-- [ ] Integrate register API
-- [ ] Integrate login API
-- [ ] Persist user session
-- [ ] Protect routes (auth middleware)
+- [x] Setup Project Structure.
+- [ ] Build Auth Layout (Shared Layout for Login/Register).
+- [ ] Build Register Page UI.
+- [ ] Build Login Page UI.
+- [ ] Integrate Register API.
+- [ ] Integrate Login API.
+- [ ] Persist User Session.
+- [ ] Protect Private Routes.
 
 ---
 
-### Milestone: `v0.2 – Dashboard & Tasks`
+### Milestone: `v0.2 – Dashboard & Core UI`
 
-- [ ] Create dashboard layout
-- [ ] Build My Tasks page
-- [ ] Implement vital task filter
-- [ ] Create task card component
-- [ ] View task details popup
-- [ ] Search task functionality
+- [ ] Build Dashboard Layout UI.
+- [ ] Build Dashboard – Send Invite Popup UI.
+- [ ] Build Notifications Dropdown UI.
+- [ ] Build Calendar Dropdown UI.
+- [ ] Build Dashboard – To-Do UI.
+- [ ] Build Dashboard – Task Status UI.
+- [ ] Build Dashboard – Completed Task UI.
+- [ ] Build Vital Task Page UI.
+- [ ] Build My Task Page UI.
+- [ ] Build Task Card Component UI.
+- [ ] Build View Task Page UI.
 
 ---
 
 ### Milestone: `v0.3 – Task Management Features`
 
-- [ ] Add task functionality
-- [ ] Edit task functionality
-- [ ] Delete task functionality
-- [ ] Add / Edit task status
-- [ ] Add / Edit task priority
-- [ ] Add / Edit / Delete categories
-- [ ] Build calendar dropdown
-- [ ] Create notifications dropdown
+- [ ] Build Add Task Popup UI.
+- [ ] Build Edit Task Popup UI.
+- [ ] Integrate Add Task API.
+- [ ] Integrate Edit Task API.
+- [ ] Integrate Delete Task API.
 
 ---
 
-### Milestone: `v0.4 – User Account Settings`
+### Milestone: `v0.4 – Task Metadata (Status, Priority, Category)`
 
-- [ ] Build Account Information Page
-- [ ] Implement Update Account Info Page
-- [ ] Create Change Password Page
-- [ ] Send invitation popup
+- [ ] Build Add Task Status Popup UI.
+- [ ] Build Edit Task Status Popup UI.
+- [ ] Integrate Add Task Status API.
+- [ ] Integrate Edit Task Status API.
+- [ ] Integrate Delete Task Status API.
+- [ ] Build Add Task Priority Popup UI.
+- [ ] Build Edit Task Priority Popup UI.
+- [ ] Integrate Add Task Priority API.
+- [ ] Integrate Edit Task Priority API.
+- [ ] Integrate Delete Task Priority API.
+- [ ] Build Task Categories Page UI.
+- [ ] Build Create Task Category Page UI.
+- [ ] Build Edit Task Category Popup UI.
+- [ ] Integrate Add Task Categories API.
+- [ ] Integrate Edit Task Categories API.
 
 ---
+
+### Milestone: `v0.5 – Account Settings`
+
+- [ ] Build Account Information Page UI.
+- [ ] Build Update Account Information Page UI.
+- [ ] Build Change Password Page UI.
 
 ### Milestone: `v1.0 – MVP Release`
 
-- [ ] Final QA Testing
-- [ ] Responsive Design Review
-- [ ] Cross-browser Testing
-- [ ] Accessibility Review
-- [ ] Performance Optimization
-- [ ] Code Cleanup & Linting
-- [ ] Update Documentation
-- [ ] Prepare Production Build
-- [ ] Deploy to Vercel
-- [ ] Tag Release v1.0
+- [ ] Final QA Testing.
+- [ ] Test Responsive Design.
+- [ ] Cross-browser Testing.
+- [ ] Accessibility Review.
+- [ ] Performance Optimization.
+- [ ] Code Cleanup & Linting.
+- [ ] Update Documentation.
+- [ ] Prepare Production Build.
+- [ ] Deploy to Vercel.
+- [ ] Tag Release v1.0.
 
 ## Project Board
 
@@ -233,7 +252,30 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 
 ## Project Structure
 
-> 📁 Project structure will be added once the initial codebase scaffolding is finalized.
+```
+Todo List Web Applications
+├─ public
+│  ├─ favicon.ico
+│  └─ images
+│     ├─ login.webp
+│     └─ register.webp
+├─ src
+│  ├─ app
+│  │  ├─ layout.tsx
+│  │  └─ page.tsx
+│  └─ styles
+│     └─ globals.css
+├─ .prettierrc
+├─ eslint.config.mjs
+├─ LICENSE
+├─ next.config.ts
+├─ package.json
+├─ pnpm-lock.yaml
+├─ postcss.config.mjs
+└─ tsconfig.json
+├─ README.md
+
+```
 
 ---
 
@@ -249,10 +291,10 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 
 ## Contributors
 
-| Avatar                                                                                                     | Name                 | GitHub                                                   | LinkedIn                                                            |
-| ---------------------------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------------- | ------------------------------------------------------------------- |
-| <img src="https://avatars.githubusercontent.com/u/170262504?v=4" width="50" style="border-radius: 50%;" /> | **Ahmed Samy**       | [@AhmedSamyEid](https://github.com/AhmedSamyEid)         | [LinkedIn](https://www.linkedin.com/in/ahmed-samy-454b72365/)       |
-| <img src="https://avatars.githubusercontent.com/u/170369393?v=4" width="50" style="border-radius: 50%;" /> | **Mahmoud Abu Zaid** | [@Mahmoud-abu-zaid](https://github.com/Mahmoud-abu-zaid) | [LinkedIn](https://www.linkedin.com/in/mahmoud-abu-zaid-742bb2365/) |
+| Avatar                                                                         | Name                 | GitHub                                                   | LinkedIn                                                            |
+| ------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------------- | ------------------------------------------------------------------- |
+| <img src="https://avatars.githubusercontent.com/u/170262504?v=4" width="50" /> | **Ahmed Samy**       | [@AhmedSamyEid](https://github.com/AhmedSamyEid)         | [LinkedIn](https://www.linkedin.com/in/ahmed-samy-454b72365/)       |
+| <img src="https://avatars.githubusercontent.com/u/170369393?v=4" width="50" /> | **Mahmoud Abu Zaid** | [@Mahmoud-abu-zaid](https://github.com/Mahmoud-abu-zaid) | [LinkedIn](https://www.linkedin.com/in/mahmoud-abu-zaid-742bb2365/) |
 
 ---
 
