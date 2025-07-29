@@ -172,7 +172,7 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 
 - [x] Setup Project Structure.
 - [x] Build Auth Layout (Shared Layout for Login/Register).
-- [ ] Build Register Page UI.
+- [x] Build Register Page UI.
 - [x] Build Login Page UI.
 - [ ] Integrate Register API.
 - [ ] Integrate Login API.
@@ -264,15 +264,20 @@ Todo List Web Applications
 │  ├─ app
 │  │  ├─ auth
 │  │  │  ├─ layout.tsx
-│  │  │  └─ login
+│  │  │  ├─ login
+│  │  │  │  └─ page.tsx
+│  │  │  └─ register
 │  │  │     └─ page.tsx
 │  │  ├─ layout.tsx
 │  │  └─ page.tsx
 │  ├─ modules
 │  │  └─ auth
-│  │     └─ login
+│  │     ├─ login
+│  │     │  └─ components
+│  │     │     └─ LoginForm.tsx
+│  │     └─ register
 │  │        └─ components
-│  │           └─ LoginForm.tsx
+│  │           └─ RegisterForm.tsx
 │  └─ styles
 │     └─ globals.css
 ├─ .prettierrc
