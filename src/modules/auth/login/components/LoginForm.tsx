@@ -7,7 +7,7 @@ import { FaUser, FaLock, FaFacebook } from "react-icons/fa";
 
 export default function LoginForm() {
   return (
-    <div className="rounded-[10px] bg-white p-5 shadow-lg max-md:w-full  md:flex md:justify-between lg:px-12 lg:py-8">
+    <div className="rounded-[10px] bg-white p-5 shadow-lg max-md:w-full md:flex md:justify-between lg:px-12 lg:py-8">
       <div className="mb-4 md:w-1/2">
         <h2 className="mb-6 text-2xl font-bold">Sign In</h2>
         <form>
@@ -39,7 +39,7 @@ export default function LoginForm() {
         </div>
 
         <p className="mt-2 text-sm">
-          Don't have an account?
+          Don&apos;t have an account?
           <Link href="/auth/register" className="ml-1 text-blue-600 hover:underline">
             Create One
           </Link>
