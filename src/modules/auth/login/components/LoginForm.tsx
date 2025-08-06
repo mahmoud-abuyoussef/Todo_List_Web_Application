@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
+import { toast } from "sonner";
 import Image from "next/image";
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { useRouter } from "next/navigation";
@@ -11,19 +11,19 @@ import { login } from "../services/loginServices";
 import { FaUser, FaLock, FaFacebook } from "react-icons/fa";
 export default function LoginForm() {
   const router = useRouter();
-  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
   } = useForm<LoginTypes>();
   const onSubmit = async (data: LoginTypes) => {
-    const result = await login({ email: data.email, password: data.password });
-    if (result.success) {
-      setMessage({ type: "success", text: result.message });
+    const response = await login({ email: data.email, password: data.password });
+    if (response.status == 200) {
+      toast.success(response.message);
       router.push("/");
     } else {
-      setMessage({ type: "error", text: result.message });
+      toast.error(response.message);
     }
   };
   return (
@@ -49,7 +49,7 @@ export default function LoginForm() {
               className="w-full rounded-md border border-gray-300 py-2 pr-4 pl-10 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
-          {message && <p className={`mb-2 text-sm ${message.type === "error" ? "text-red-500" : "text-green-500"}`}>{message.text}</p>}
+
           <div className="mb-4 flex items-center">
             <input id="remember" type="checkbox" className="mr-2" />
             <label htmlFor="remember">Remember Me</label>
