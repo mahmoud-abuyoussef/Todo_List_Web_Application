@@ -65,7 +65,7 @@ export default function LoginForm() {
           <FaSquareXTwitter className="mx-1 cursor-pointer" size={20} />
         </div>
         <p className="mt-2 text-sm">
-          Don't have an account?
+          Don&apos;t have an account?
           <Link href="/auth/register" className="ml-1 text-blue-600 hover:underline">
             Create One
           </Link>
