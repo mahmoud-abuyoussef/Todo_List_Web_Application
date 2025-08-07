@@ -174,9 +174,9 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 - [x] Build Auth Layout (Shared Layout for Login/Register).
 - [x] Build Register Page UI.
 - [x] Build Login Page UI.
-- [ ] Integrate Register API.
-- [ ] Integrate Login API.
-- [ ] Persist User Session.
+- [x] Integrate Register API.
+- [x] Integrate Login API.
+- [x] Persist User Session.
 - [ ] Protect Private Routes.
 
 ---
@@ -262,6 +262,9 @@ Todo List Web Applications
 │     └─ register.webp
 ├─ src
 │  ├─ app
+│  │  ├─ api
+│  │  │  └─ [...path]
+│  │  │     └─ route.ts
 │  │  ├─ auth
 │  │  │  ├─ layout.tsx
 │  │  │  ├─ login
@@ -273,11 +276,23 @@ Todo List Web Applications
 │  ├─ modules
 │  │  └─ auth
 │  │     ├─ login
-│  │     │  └─ components
-│  │     │     └─ LoginForm.tsx
+│  │     │  ├─ components
+│  │     │  │  └─ LoginForm.tsx
+│  │     │  ├─ services
+│  │     │  │  └─ loginServices.ts
+│  │     │  └─ types
+│  │     │     └─ loginTypes.ts
 │  │     └─ register
-│  │        └─ components
-│  │           └─ RegisterForm.tsx
+│  │        ├─ components
+│  │        │  └─ RegisterForm.tsx
+│  │        ├─ services
+│  │        │  └─ registerServices.ts
+│  │        └─ types
+│  │           └─ registerTypes.ts
+│  ├─ providers
+│  │  └─ Providers.tsx
+│  ├─ services
+│  │  └─ apiClient.ts
 │  └─ styles
 │     └─ globals.css
 ├─ .prettierrc
