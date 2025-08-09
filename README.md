@@ -177,7 +177,7 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 - [x] Integrate Register API.
 - [x] Integrate Login API.
 - [x] Persist User Session.
-- [ ] Protect Private Routes.
+- [x] Protect Private Routes.
 
 ---
 
