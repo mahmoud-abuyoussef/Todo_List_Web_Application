@@ -3,8 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const token = request.cookies.get("token")?.value;
-  console.log(token);
   const isAuthPage = pathname.startsWith("/auth/login");
+  const isRegisterPage = pathname.startsWith("/auth/register");
   const isPublicAssets = ["/_next", "/favicon.ico", "/images"].some(prefix => pathname.startsWith(prefix));
 
   if (isPublicAssets) {
@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
-  if (!isAuthPage && !token) {
+  if (!isAuthPage && !token && !isRegisterPage) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
 
