@@ -1,15 +1,45 @@
 "use client";
+
 import Link from "next/link";
+import { toast } from "sonner";
 import Image from "next/image";
 import { MdEmail } from "react-icons/md";
+import { useForm } from "react-hook-form";
 import { IoMdLock } from "react-icons/io";
+import { useRouter } from "next/navigation";
 import { RiUserFill } from "react-icons/ri";
 import { FaUserPen } from "react-icons/fa6";
 import { LuUserRoundPen } from "react-icons/lu";
-import { useRegisterForm } from "../hooks/useRegisterForm";
+import { RegisterTypes } from "../types/registerTypes";
+import { registerUser } from "../services/registerServices";
 
 export default function RegisterForm() {
-  const { onSubmit, register, errors, handleSubmit } = useRegisterForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm<RegisterTypes>();
+
+  const router = useRouter();
+
+  async function onSubmit(data: RegisterTypes) {
+    try {
+      const response = await registerUser({ data });
+
+      if (response.status === 201) {
+        router.push("/auth/login");
+        toast.success(response.message);
+      }
+    } catch (error: any) {
+      if (error.response?.status === 400) {
+        toast.error(error.response.message);
+      } else if (error.response?.status === 429) {
+        toast.error(error.response.message);
+      } else {
+        toast.error(error.response.message);
+      }
+    }
+  }
   return (
     <div className="bg-background container mx-4 flex-1 rounded-[10px] p-5 max-md:w-full md:flex md:items-center md:justify-center md:gap-20 md:px-10 lg:max-w-4xl">
       <div className="hidden md:block md:w-1/2">
@@ -26,7 +56,7 @@ export default function RegisterForm() {
         <h1 className="mb-2 text-4xl font-bold">Sign Up</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex w-full flex-col gap-3">
-            <div className="border-border flex w-full items-center gap-4 rounded-lg border-1 p-2">
+            <div className="border-border flex w-full items-center gap-4 rounded-lg border-2 p-2">
               <FaUserPen className="text-xl" />
               <input
                 type="text"
@@ -52,7 +82,7 @@ export default function RegisterForm() {
 
             {errors.firstName && <p className="text-priority-heigh text-sm">{errors.firstName.message}</p>}
 
-            <div className="border-border flex w-full items-center gap-4 rounded-lg border-1 p-2">
+            <div className="border-border flex w-full items-center gap-4 rounded-lg border-2 p-2">
               <LuUserRoundPen className="text-xl font-extrabold" />
               <input
                 type="text"
@@ -78,7 +108,7 @@ export default function RegisterForm() {
 
             {errors.lastName && <p className="text-priority-heigh text-sm">{errors.lastName.message}</p>}
 
-            <div className="border-border flex w-full items-center gap-4 rounded-lg border-1 p-2">
+            <div className="border-border flex w-full items-center gap-4 rounded-lg border-2 p-2">
               <RiUserFill className="text-xl" />
               <input
                 type="text"
@@ -97,7 +127,7 @@ export default function RegisterForm() {
 
             {errors.username && <p className="text-priority-heigh text-sm">{errors.username.message}</p>}
 
-            <div className="border-border flex w-full items-center gap-4 rounded-lg border-1 p-2">
+            <div className="border-border flex w-full items-center gap-4 rounded-lg border-2 p-2">
               <MdEmail className="text-xl" />
               <input
                 type="email"
@@ -115,7 +145,7 @@ export default function RegisterForm() {
 
             {errors.email && <p className="text-priority-heigh text-sm">{errors.email.message}</p>}
 
-            <div className="border-border flex w-full items-center gap-4 rounded-lg border-1 p-2">
+            <div className="border-border flex w-full items-center gap-4 rounded-lg border-2 p-2">
               <IoMdLock className="text-xl" />
               <input
                 type="password"
