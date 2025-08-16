@@ -1,57 +1,59 @@
 "use client";
 import Link from "next/link";
-import { toast } from "sonner";
 import Image from "next/image";
-import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
-import { useRouter } from "next/navigation";
-import { LoginTypes } from "../types/loginTypes";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { login } from "../services/loginServices";
+import { useLoginForm } from "../hooks/useLoginForm";
 import { FaUser, FaLock, FaFacebook } from "react-icons/fa";
 export default function LoginForm() {
-  const router = useRouter();
-
-  const {
-    register,
-    handleSubmit,
-    formState: { isSubmitting },
-  } = useForm<LoginTypes>();
-  const onSubmit = async (data: LoginTypes) => {
-    const response = await login({ email: data.email, password: data.password });
-    if (response.status == 200) {
-      toast.success(response.message);
-      router.push("/");
-    } else {
-      toast.error(response.message);
-    }
-  };
+  const { register, errors, isSubmitting, onSubmit, handleSubmit } = useLoginForm();
   return (
     <div className="rounded-[10px] bg-white p-5 shadow-lg max-md:w-full md:flex md:justify-between lg:px-12 lg:py-8">
       <div className="mb-4 md:w-1/2">
         <h2 className="mb-6 text-2xl font-bold">Sign In</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="relative mb-4">
-            <FaUser className="absolute top-3 left-3 text-black" />
-            <input
-              type="text"
-              placeholder="Enter Email"
-              {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
-              className="w-full rounded-md border border-gray-300 py-2 pr-4 pl-10 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
+          <div className="mb-4">
+            <div className="flex items-center rounded-md border border-gray-300 focus-within:ring-2 focus-within:ring-blue-500">
+              <FaUser className="ml-3 text-black" />
+              <input
+                type="text"
+                placeholder="Enter Email"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "Please enter a valid email address",
+                  },
+                })}
+                className="flex-1 bg-transparent px-3 py-2 focus:outline-none"
+              />
+            </div>
+            {errors.email && <p className="text-priority-heigh mt-2 text-sm">{errors.email.message}</p>}
           </div>
-          <div className="relative mb-4">
-            <FaLock className="absolute top-3 left-3 text-black" />
-            <input
-              type="password"
-              placeholder="Enter Password"
-              {...register("password", { required: true, minLength: 8 })}
-              className="w-full rounded-md border border-gray-300 py-2 pr-4 pl-10 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
+          <div className="mb-4">
+            <div className="flex items-center rounded-md border border-gray-300 focus-within:ring-2 focus-within:ring-blue-500">
+              <FaLock className="ml-3 text-black" />
+              <input
+                type="password"
+                placeholder="Enter Password"
+                {...register("password", {
+                  required: "Password is required",
+                  minLength: {
+                    value: 8,
+                    message: "Your password should contain at least 8 characters for better security",
+                  },
+                  pattern: {
+                    value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/,
+                    message: "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character ",
+                  },
+                })}
+                className="flex-1 bg-transparent px-3 py-2 focus:outline-none"
+              />
+            </div>
+            {errors.password && <p className="text-priority-heigh mt-2 max-w-[250px] text-sm">{errors.password.message}</p>}
           </div>
-
           <div className="mb-4 flex items-center">
-            <input id="remember" type="checkbox" className="mr-2" />
+            <input id="remember" {...register("remember")} type="checkbox" className="mr-2" />
             <label htmlFor="remember">Remember Me</label>
           </div>
           <button type="submit" disabled={isSubmitting} className="mb-4 w-fit rounded-[5px] bg-[#ff9090] px-7 py-4 text-white hover:bg-[#f87272] disabled:opacity-50">
