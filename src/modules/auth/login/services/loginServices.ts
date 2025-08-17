@@ -5,6 +5,7 @@ import { LoginTypes } from "../types/loginTypes";
 export async function login({ email, password, remember }: LoginTypes) {
   const expireToken = new Date();
   expireToken.setDate(expireToken.getDate() + 7);
+  
   try {
     const response = await axios.post("/api/auth/login", { email, password });
     if (response.status === 200 && response.data.token) {
