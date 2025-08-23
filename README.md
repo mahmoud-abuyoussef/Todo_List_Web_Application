@@ -4,9 +4,9 @@
 
 ![Maintainer](https://img.shields.io/badge/Maintainer-Mahmoud%20Abuyoussef-blue?style=flat-square)
 
-> 🧑‍🏫 **Note:** This project is part of a **professional front-end training program**, supervised by a senior developer to simulate a real-world team workflow.
+> 🧑‍🏫 **Note:** This project is part of a **professional front-end training program**, supervised by a senior Engineer to simulate a real-world team workflow.
 
-A professional training project for building a responsive and modern **Todo List Web Application**, developed by a team of front-end developers under the supervision of a Senior Front-End Developer.  
+A professional training project for building a responsive and modern **Todo List Web Application**, developed by a team of front-end developers under the supervision of a Senior Front-End Engineer.  
 This project simulates a real-world development environment—from receiving designs in Figma to deploying the final product.
 
 ---
@@ -332,7 +332,7 @@ Todo List Web Applications
 
 ### Mahmoud Abuyoussef
 
-**Role:** Senior Front-End Developer / Project Manager
+**Role:** Senior Front-End Engineer / Project Manager
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:mahmoudabuyoussef5@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/mahmoud-abuyoussef)
