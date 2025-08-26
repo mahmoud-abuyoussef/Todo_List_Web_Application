@@ -3,9 +3,9 @@
 @theme {
   --color-input: hsl(0, 0%, 60%);
   --color-icon: hsl(0, 0%, 100%);
-  --color-date: hsl(0, 0%, 100%);
   --color-text: hsl(0, 0%, 45.49%);
   --color-background: hsl(0, 0%, 100%);
+  --color-date: hsl(199.8, 100%, 61.37%);
   --color-border: hsl(228, 5.62%, 65.1%);
   --color-main-color: hsl(0, 100%, 70.2%);
   --color-text-muted: hsl(228, 5.62%, 65.1%);
