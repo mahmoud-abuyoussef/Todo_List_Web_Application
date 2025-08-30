@@ -126,7 +126,6 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 
 ### Popups
 
-- Send Invitation to New Member
 - Add New Task
 - Edit Task
 - Add Task Priority
@@ -183,8 +182,7 @@ Figma License: [Free Figma Design Source](https://www.figma.com/design/GN707LPUS
 
 ### Milestone: `v0.2 – Dashboard & Core UI`
 
-- [ ] Build Dashboard Layout UI.
-- [ ] Build Dashboard – Send Invite Popup UI.
+- [x] Build Dashboard Layout UI.
 - [ ] Build Notifications Dropdown UI.
 - [ ] Build Calendar Dropdown UI.
 - [ ] Build Dashboard – To-Do UI.
@@ -295,6 +293,7 @@ Todo List Web Applications
 │  │  └─ apiClient.ts
 │  └─ styles
 │     └─ globals.css
+├─ tsconfig.json
 ├─ .prettierrc
 ├─ eslint.config.mjs
 ├─ LICENSE
@@ -302,8 +301,7 @@ Todo List Web Applications
 ├─ package.json
 ├─ pnpm-lock.yaml
 ├─ postcss.config.mjs
-├─ README.md
-└─ tsconfig.json
+└─ README.md
 
 ```
 
@@ -325,6 +323,7 @@ Todo List Web Applications
 | ------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------------- | ------------------------------------------------------------------- |
 | <img src="https://avatars.githubusercontent.com/u/170262504?v=4" width="50" /> | **Ahmed Samy**       | [@AhmedSamyEid](https://github.com/AhmedSamyEid)         | [LinkedIn](https://www.linkedin.com/in/ahmed-samy-454b72365/)       |
 | <img src="https://avatars.githubusercontent.com/u/170369393?v=4" width="50" /> | **Mahmoud Abu Zaid** | [@Mahmoud-abu-zaid](https://github.com/Mahmoud-abu-zaid) | [LinkedIn](https://www.linkedin.com/in/mahmoud-abu-zaid-742bb2365/) |
+| <img src="https://avatars.githubusercontent.com/u/186600640?v=4" width="50" /> | **Wedad Osama**      | [@wedadosama](https://github.com/wedadosama)             | [LinkedIn](https://www.linkedin.com/in/wedad-elkammash-252418309/)  |
 
 ---
 
@@ -371,6 +370,7 @@ Contributors:
 
 - [Ahmed Samy](https://github.com/AhmedSamyEid)
 - [Mahmoud Abu Zaid](https://github.com/Mahmoud-abu-zaid)
+- [Wedad Osama](https://github.com/wedadosama)
 
 You are welcome to contribute or reuse parts of the project under the terms of the MIT license.  
 Please retain proper credit when using this codebase.
