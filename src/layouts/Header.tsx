@@ -15,11 +15,13 @@ export default function Header({ setSidebarState }: { setSidebarState: Dispatch<
         </Link>
 
         <div className="flex items-center justify-between gap-1">
-          <CustomButton icon={<FiSidebar onClick={() => setSidebarState(prev => !prev)} />} />
-
           <div className="rounded-[8px] md:mr-20 md:flex md:bg-white md:shadow">
             <input type="text" placeholder="Search your task here..." className="hidden text-[15px] outline-0 md:block md:w-full md:px-5" />
             <CustomButton icon={<FaSearch />} />
+          </div>
+
+          <div className="lg:hidden">
+            <CustomButton icon={<FiSidebar onClick={() => setSidebarState(prev => !prev)} />} />
           </div>
 
           <div>
