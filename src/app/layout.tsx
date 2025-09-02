@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>
+      <body cz-shortcut-listen="true" className={`${montserrat.className} antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>

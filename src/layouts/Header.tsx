@@ -8,7 +8,7 @@ import { PiBellSimpleLight } from "react-icons/pi";
 
 export default function Header({ setSidebarState }: { setSidebarState: Dispatch<SetStateAction<boolean>> }) {
   return (
-    <header className="bg-background-navbar sticky top-0 px-5">
+    <header className="bg-background-navbar sticky top-0 z-50 px-5">
       <div className="container mx-auto flex items-center justify-between py-5">
         <Link href="/" className="font-bold md:text-3xl">
           <span className="text-main-color">Dash</span>board

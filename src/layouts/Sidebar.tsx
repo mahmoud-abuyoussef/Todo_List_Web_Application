@@ -10,7 +10,7 @@ export default function Sidebar({ sidebarState }: { sidebarState: boolean }) {
   return (
     <div>
       <aside
-        className={`${sidebarState ? "ml-0" : "ml-[-400px] lg:ml-0"} bg-main-color fixed z-50 mt-15 flex h-[calc(100vh-140px)] flex-col justify-between rounded-t-xs rounded-r-lg p-5 transition-all duration-700`}
+        className={`${sidebarState ? "ml-0" : "ml-[-400px] lg:ml-0"} bg-main-color fixed z-50 mt-15 flex h-[calc(100vh-120px)] flex-col justify-between rounded-t-xs rounded-r-lg p-5 transition-all duration-700 lg:static lg:z-0`}
       >
         <div>
           <div className="mt-[-65px]">
@@ -39,7 +39,7 @@ export default function Sidebar({ sidebarState }: { sidebarState: boolean }) {
           </nav>
         </div>
 
-        <div className="logout">
+        <div className="p-5">
           <button className="flex cursor-pointer items-center gap-5 font-medium text-white">
             <MdLogout />
             Logout
