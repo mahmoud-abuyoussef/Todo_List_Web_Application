@@ -39,5 +39,5 @@ export function useRegisterForm() {
       }
     }
   }
-  return {onSubmit, register, errors, handleSubmit};
+  return { onSubmit, register, errors, handleSubmit };
 }
