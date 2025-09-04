@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaRegCircle } from "react-icons/fa";
-import { tasks } from "@/modules/auth/task/fakeData/task";
+import { tasks } from "@/modules/task/fakeData/completedTasks";
 
 export default function CompletedTaskWidget() {
   return (
