@@ -1,6 +1,6 @@
 "use client";
 import { GoChecklist } from "react-icons/go";
-import type { StatusTask} from "@/modules/task/types/taskTyps"; 
+import type { StatusTask } from "@/modules/task/types/taskTyps";
 
 export default function TaskStatusWidget() {
   const tasks: StatusTask[] = [
@@ -10,7 +10,7 @@ export default function TaskStatusWidget() {
   ];
 
   return (
-    <div className="bg-background w-full max-w-2xl rounded-2xl p-6 shadow-md sm:h-[360px]">
+    <div className="bg-background w-full max-w-2xl rounded-2xl p-6 shadow-md min-h-fit max-h-fit">
       <div className="mb-6 flex items-center gap-3">
         <GoChecklist className="text-text-muted h-6 w-6" />
         <h3 className="text-main-color text-xl font-semibold">Task Status</h3>
@@ -23,10 +23,7 @@ export default function TaskStatusWidget() {
               <div
                 className="absolute inset-0 rounded-full"
                 style={{
-                  background: `conic-gradient(var(--${t.color.replace(
-                    "bg-",
-                    "color-"
-                  )}) ${t.value * 3.6}deg, #e5e7eb 0)`,
+                  background: `conic-gradient(var(--${t.color.replace("bg-", "color-")}) ${t.value * 3.6}deg, #e5e7eb 0)`,
                 }}
               >
                 <div className={`${t.color} invisible`} />
